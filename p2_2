@@ -1,0 +1,37 @@
+let c=2;
+let s=2;
+let f=3;
+let paleta=['#53506b', '#e21001', '#f0b0ce', '#ffcc00'];
+
+function setup() {
+  createCanvas(400, 400);
+  background(paleta [3])
+}
+
+function draw() {
+ // background(paleta [c]);
+  if(mouseX>0 && mouseX<width/3){
+    c=0;
+    s=1;
+    f=2;
+     }
+  
+  else if(mouseX>width/3 && mouseX<width-width/3){
+    c=1;
+    s=2;
+    f=0;
+     }
+  
+   else if(mouseX>width-width/3 && mouseX<width){
+     c=2;
+     s=0;
+     f=1;
+   }else{
+     c=3;
+   }
+  strokeWeight(20);
+  fill(paleta[f]);
+  stroke(paleta[s]);
+  circle(mouseX,mouseY,50,50);
+}
+
